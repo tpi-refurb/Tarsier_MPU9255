@@ -1,0 +1,46 @@
+#######################################
+# Syntax Coloring Map for Tarsier_MPU9255
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Tarsier_MPU9255	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+init	KEYWORD2
+setScaleAccel	KEYWORD2
+setScaleGyro	KEYWORD2
+readAccel	KEYWORD2
+readGyro	KEYWORD2
+readMag	KEYWORD2
+mpuReadByte	KEYWORD2
+mpuReadBytes	KEYWORD2
+mpuWriteByte	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+GYRO_FULL_SCALE_250DPS	LITERAL1
+GYRO_FULL_SCALE_500DPS	LITERAL1
+GYRO_FULL_SCALE_1000DPS	LITERAL1
+GYRO_FULL_SCALE_2000DPS	LITERAL1
+ACCEL_FULL_SCALE_2G	LITERAL1
+ACCEL_FULL_SCALE_4G	LITERAL1
+ACCEL_FULL_SCALE_8G	LITERAL1
+ACCEL_FULL_SCALE_16G	LITERAL1
+
+_GX	LITERAL1
+_GY	LITERAL1
+_GZ	LITERAL1
+_AX	LITERAL1
+_AY	LITERAL1
+_AZ	LITERAL1
+_MX	LITERAL1
+_MY	LITERAL1
+_MZ	LITERAL1
