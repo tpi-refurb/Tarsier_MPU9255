@@ -78,6 +78,7 @@ public:
 	float ACCEL_8G				= 4096;	//for +- 8g scale
 	float ACCEL_16G				= 2048;	//for +- 16g scale
 	
+	// for gyro full scale VALUE selection
 	float GYRO_250DPS			= 131;	//for +- 250  dps scale (default value)
 	float GYRO_500DPS			= 65.5;	//for +- 500  dps scale
 	float GYRO_1000DPS			= 32.8;	//for +- 1000 dps scale
