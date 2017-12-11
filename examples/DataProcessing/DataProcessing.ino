@@ -9,6 +9,7 @@
 #include <Wire.h>           // include MPU9255 library
 #include <Tarsier_MPU9255.h>// include MPU9255 library
 
+boolean _showProcessingData = true; //toggle show data in processing mode
 Tarsier_MPU9255 mpu;
 
 void setup() {
@@ -82,33 +83,47 @@ void loop() {
 }
 
 void print_data(float ax, float ay, float az, float gx, float gy, float gz, float mx, float my, float mz) {
-
-  Serial.print("AX: ");
-  Serial.print(ax);
-  Serial.print(" g"); Serial.print("\t");
-  Serial.print("AY: ");
-  Serial.print(ay);
-  Serial.print(" g"); Serial.print("\t");
-  Serial.print("AZ: ");
-  Serial.print(az);
-  Serial.print(" g"); Serial.print("\t");
-  Serial.print("GX: ");
-  Serial.print(gx);
-  Serial.print(" dps"); Serial.print("\t");
-  Serial.print("GY: ");
-  Serial.print(gy);
-  Serial.print(" dps"); Serial.print("\t");
-  Serial.print("GZ: ");
-  Serial.print(gz);
-  Serial.print(" dps"); Serial.print("\t");
-  Serial.print("MX: ");
-  Serial.print(mx);
-  Serial.print(" qT"); Serial.print("\t");
-  Serial.print("MY: ");
-  Serial.print(my);
-  Serial.print(" qT"); Serial.print("\t");
-  Serial.print("MZ: ");
-  Serial.print(mz);
-  Serial.println(" qT");
+  if (!_showProcessingData) {
+    Serial.print("AX: ");
+    Serial.print(ax);
+    Serial.print(" g"); Serial.print("\t");
+    Serial.print("AY: ");
+    Serial.print(ay);
+    Serial.print(" g"); Serial.print("\t");
+    Serial.print("AZ: ");
+    Serial.print(az);
+    Serial.print(" g"); Serial.print("\t");
+    Serial.print("GX: ");
+    Serial.print(gx);
+    Serial.print(" dps"); Serial.print("\t");
+    Serial.print("GY: ");
+    Serial.print(gy);
+    Serial.print(" dps"); Serial.print("\t");
+    Serial.print("GZ: ");
+    Serial.print(gz);
+    Serial.print(" dps"); Serial.print("\t");
+    Serial.print("MX: ");
+    Serial.print(mx);
+    Serial.print(" qT"); Serial.print("\t");
+    Serial.print("MY: ");
+    Serial.print(my);
+    Serial.print(" qT"); Serial.print("\t");
+    Serial.print("MZ: ");
+    Serial.print(mz);
+    Serial.println(" qT");
+  } else {
+    Serial.print(ax); Serial.print("\t");
+    Serial.print(ay); Serial.print("\t");
+    Serial.print(az); Serial.print("\t");
+    Serial.print("\t");
+    Serial.print(gx); Serial.print("\t");
+    Serial.print(gy); Serial.print("\t");
+    Serial.print(gz); Serial.print("\t");
+    Serial.print("\t");
+    Serial.print(mx); Serial.print("\t");
+    Serial.print(my); Serial.print("\t");
+    Serial.print(mz);
+    Serial.println();
+  }
   delay(100);
 }

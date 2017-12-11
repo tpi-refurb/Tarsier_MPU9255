@@ -35,9 +35,10 @@ void loop() {
   Serial.print(mpu._GZ); Serial.print("\t");
   Serial.print("MX: ");
   Serial.print(mpu._MX);  Serial.print("\t");
-  Serial.print(" MY: ");
+  Serial.print("MY: ");
   Serial.print(mpu._MY);  Serial.print("\t");
   Serial.print(" MZ: ");
   Serial.println(mpu._MZ);
+
   delay(100);
 }
