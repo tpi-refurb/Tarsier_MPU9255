@@ -60,16 +60,29 @@ public:
 	int16_t _GX,_GY,_GZ=0; // handles for gyro values
 	int16_t _MX,_MY,_MZ=0; // handles for mag values
 	
+	// for gyro full scale INDEX selection
 	uint8_t GYRO_FULL_SCALE_250DPS	= 1;
 	uint8_t GYRO_FULL_SCALE_500DPS  = 2;
 	uint8_t GYRO_FULL_SCALE_1000DPS = 3;
 	uint8_t GYRO_FULL_SCALE_2000DPS = 4;
 	
+	// for accel full scale INDEX selection
 	uint8_t ACCEL_FULL_SCALE_2G		= 1;
 	uint8_t ACCEL_FULL_SCALE_4G		= 2;
 	uint8_t ACCEL_FULL_SCALE_8G		= 3;
 	uint8_t ACCEL_FULL_SCALE_16G	= 4;
-
+	
+	// for accel full scale VALUE selection
+	float ACCEL_2G				= 16384;//for +- 2g scale (default value)
+	float ACCEL_4G				= 8192;	//for +- 4g scale
+	float ACCEL_8G				= 4096;	//for +- 8g scale
+	float ACCEL_16G				= 2048;	//for +- 16g scale
+	
+	float GYRO_250DPS			= 131;	//for +- 250  dps scale (default value)
+	float GYRO_500DPS			= 65.5;	//for +- 500  dps scale
+	float GYRO_1000DPS			= 32.8;	//for +- 1000 dps scale
+	float GYRO_2000DPS			= 16.4;	//for +- 2000 dps scale
+	
 
 protected:
 private:
