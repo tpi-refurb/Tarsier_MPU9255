@@ -47,7 +47,7 @@ void loop() {
   */
   ax = ax / 16384;
   ay = ay / 16384;
-  az = az / 16384;
+  az = az / mpu.ACCEL_2G; // or simply use predefined variable such as(ACCEL_2G, ACCEL_4G, ACCEL_8G, ACCEL_16G)
 
   /*---- Gyroscope data ----*/
   /*
@@ -60,7 +60,7 @@ void loop() {
   */
   gx = gx / 131;
   gy = gy / 131;
-  gz = gz / 131;
+  gz = gz / mpu.GYRO_250DPS;  // or simply use predefined variable such as(GYRO_250DPS, GYRO_500DPS, GYRO_1000DPS, GYRO_2000DPS)
 
   /*---- Magnetic flux ----*/
   /*
