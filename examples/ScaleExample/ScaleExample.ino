@@ -36,6 +36,7 @@ void setup() {
 
 void loop() {
   /*
+    Valid arguments for setting Gyro and Accel scale full range (it can be number or constant variable, please see below)
     GYRO_FULL_SCALE_250DPS  = 1;
     GYRO_FULL_SCALE_500DPS  = 2;
     GYRO_FULL_SCALE_1000DPS = 3;
@@ -60,8 +61,7 @@ void loop() {
   // set gyroscope scale to +- 500 dps and accelerometer scale to +- 4g
   mpu.setScaleAccel(2);
   mpu.setScaleGyro(2);
-  for (int i = 0; i <= 10; i++) //make some readings
-  {
+  for (int i = 0; i <= 10; i++) {
     print_data();
     delay(1000);
   }
@@ -71,8 +71,7 @@ void loop() {
   // set gyroscope scale to +- 1000 dps and accelerometer scale to +- 8g
   mpu.setScaleAccel(3);
   mpu.setScaleGyro(3);
-  for (int i = 0; i <= 10; i++) //make some readings
-  {
+  for (int i = 0; i <= 10; i++) {
     print_data();
     delay(1000);
   }
@@ -82,8 +81,7 @@ void loop() {
   // set gyroscope scale to +- 2000 dps and accelerometer scale to +- 16g
   mpu.setScaleAccel(4);
   mpu.setScaleGyro(4);
-  for (int i = 0; i <= 10; i++) //make some readings
-  {
+  for (int i = 0; i <= 10; i++) {
     print_data();
     delay(1000);
   }
