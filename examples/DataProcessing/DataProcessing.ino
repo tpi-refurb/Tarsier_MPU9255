@@ -115,11 +115,11 @@ void print_data(float ax, float ay, float az, float gx, float gy, float gz, floa
     Serial.print(ax); Serial.print("\t");
     Serial.print(ay); Serial.print("\t");
     Serial.print(az); Serial.print("\t");
-    Serial.print("\t");
+    //Serial.print("\t");
     Serial.print(gx); Serial.print("\t");
     Serial.print(gy); Serial.print("\t");
     Serial.print(gz); Serial.print("\t");
-    Serial.print("\t");
+    //Serial.print("\t");
     Serial.print(mx); Serial.print("\t");
     Serial.print(my); Serial.print("\t");
     Serial.print(mz);
