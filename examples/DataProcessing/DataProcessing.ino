@@ -38,7 +38,7 @@ void loop() {
 
   // do the math :
 
-  //---- Acceleration ----
+  /*---- Acceleration ----*/
   /*
     To get acceleration in 'g', each reading has to be divided by :
     -> 16384 for +- 2g scale (default value)
@@ -50,7 +50,7 @@ void loop() {
   ay = ay / 16384;
   az = az / 16384;
 
-  //---- Gyroscope data ----
+  /*---- Gyroscope data ----*/
   /*
     To get rotation in dps (degrees per second), each reading has to be divided by :
     -> 131   for +- 250  dps scale (default value)
@@ -63,7 +63,7 @@ void loop() {
   gy = gy / 131;
   gz = gz / 131;
 
-  //---- Magnetic flux ----
+  /*---- Magnetic flux ----*/
   /*
     To get magnetic flux density in μT, each reading has to be multiplied by some number (calibration) and then divided by 0.6.
     (Faced North each axis should output arround 31 µT) (without any metal / walls around)
@@ -81,29 +81,29 @@ void loop() {
   // print all data
   Serial.print("AX: ");
   Serial.print(ax);
-  Serial.print(" g");
-  Serial.print(" AY: ");
+  Serial.print(" g"); Serial.print("\t");
+  Serial.print("AY: ");
   Serial.print(ay);
-  Serial.print(" g");
+  Serial.print(" g"); Serial.print("\t");
   Serial.print(" AZ: ");
   Serial.print(az);
-  Serial.print(" g");
-  Serial.print("     GX: ");
+  Serial.print(" g"); Serial.print("\t");
+  Serial.print("GX: ");
   Serial.print(gx);
-  Serial.print(" dps");
-  Serial.print(" GY: ");
+  Serial.print(" dps"); Serial.print("\t");
+  Serial.print("GY: ");
   Serial.print(gy);
-  Serial.print(" dps");
-  Serial.print(" GZ: ");
+  Serial.print(" dps"); Serial.print("\t");
+  Serial.print("GZ: ");
   Serial.print(gz);
-  Serial.print(" dps");
-  Serial.print("     MX: ");
+  Serial.print(" dps"); Serial.print("\t");
+  Serial.print("MX: ");
   Serial.print(mx);
-  Serial.print(" qT");
+  Serial.print(" qT"); Serial.print("\t");
   Serial.print(" MY: ");
   Serial.print(my);
-  Serial.print(" qT");
-  Serial.print(" MZ: ");
+  Serial.print(" qT"); Serial.print("\t");
+  Serial.print("MZ: ");
   Serial.print(mz);
   Serial.println(" qT");
   delay(100);
