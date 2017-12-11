@@ -35,7 +35,6 @@ void loop() {
   float my = mpu._MY;
   float mz = mpu._MZ;
 
-
   // do the math :
 
   /*---- Acceleration ----*/
@@ -78,14 +77,19 @@ void loop() {
   my = my / 0.6;
   mz = mz / 0.6;
 
-  // print all data
+  // let's print all data by calling print_data function
+  print_data( ax,  ay,  az,  gx,  gy,  gz,  mx,  my,  mz);
+}
+
+void print_data(float ax, float ay, float az, float gx, float gy, float gz, float mx, float my, float mz) {
+
   Serial.print("AX: ");
   Serial.print(ax);
   Serial.print(" g"); Serial.print("\t");
   Serial.print("AY: ");
   Serial.print(ay);
   Serial.print(" g"); Serial.print("\t");
-  Serial.print(" AZ: ");
+  Serial.print("AZ: ");
   Serial.print(az);
   Serial.print(" g"); Serial.print("\t");
   Serial.print("GX: ");
@@ -100,7 +104,7 @@ void loop() {
   Serial.print("MX: ");
   Serial.print(mx);
   Serial.print(" qT"); Serial.print("\t");
-  Serial.print(" MY: ");
+  Serial.print("MY: ");
   Serial.print(my);
   Serial.print(" qT"); Serial.print("\t");
   Serial.print("MZ: ");
