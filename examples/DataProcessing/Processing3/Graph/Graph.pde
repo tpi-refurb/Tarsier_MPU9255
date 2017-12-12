@@ -23,7 +23,7 @@ void setup() {
   size(1000, 600);  
   //size(1000, 600,P3D);
   rectMode(CENTER); 
-  surface.setTitle("Kalman Filter Test -Marianz");
+  surface.setTitle("Data Processing Plotter -Marianz");
 
   println(Serial.list()); // Use this to print connected serial devices
   //serial = new Serial(this, Serial.list()[0], 115200); // Set this to your serial port obtained using the line above
