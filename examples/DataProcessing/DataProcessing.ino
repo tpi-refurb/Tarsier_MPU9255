@@ -1,5 +1,5 @@
 /*
-  Example 2 :
+  Example 4 :
   This example reads data from the sensors and calculates :
   - Acceleration in 'g' ( 1 g = 9.8 m/s^2)
   - Rotation speed in dps (degrees per second)
@@ -115,15 +115,13 @@ void print_data(float ax, float ay, float az, float gx, float gy, float gz, floa
     Serial.print(ax); Serial.print("\t");
     Serial.print(ay); Serial.print("\t");
     Serial.print(az); Serial.print("\t");
-    //Serial.print("\t");
     Serial.print(gx); Serial.print("\t");
     Serial.print(gy); Serial.print("\t");
     Serial.print(gz); Serial.print("\t");
-    //Serial.print("\t");
     Serial.print(mx); Serial.print("\t");
     Serial.print(my); Serial.print("\t");
     Serial.print(mz);
     Serial.println();
   }
-  delay(100);
+  delay(10);
 }

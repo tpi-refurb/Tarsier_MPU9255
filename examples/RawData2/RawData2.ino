@@ -1,6 +1,7 @@
 /*
-  Example 1 :
+  Example 2 :
   This example initializes the sensors and outputs raw data from Gyroscope, Accelerometer and Magnetometer.
+  The same with example #1 (RawData.ino) but in different approach
 
 */
 
